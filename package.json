@@ -1,0 +1,26 @@
+{
+  "name": "ember-activity-stream",
+  "version": "0.0.1",
+  "description": "Ember activity stream showcase for Ora (New Zealand)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "ember-cli-rails-addon": "^0.0.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htatche/ember-activity-stream.git"
+  },
+  "author": "Herve Tatche",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/htatche/ember-activity-stream/issues"
+  },
+  "homepage": "https://github.com/htatche/ember-activity-stream#readme"
+}
