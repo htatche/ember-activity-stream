@@ -30,6 +30,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
+      # Ember simple auth token
+      t.string :authentication_token, null: false, default: ""
 
       t.timestamps null: false
     end
