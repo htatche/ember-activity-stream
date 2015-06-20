@@ -33,6 +33,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # Ember simple auth token
       t.string :authentication_token, null: false, default: ""
 
+      # Personal
+      t.string :name, null: false, default: ""
+
       t.timestamps null: false
     end
 

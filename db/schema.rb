@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20150619220030) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "authentication_token",   default: "", null: false
+    t.string   "name",                   default: "", null: false
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end

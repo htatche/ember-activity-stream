@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
 
+  validates_presence_of       :name
+
   has_many :blogs,           dependent: :delete_all
   has_many :recipes,         dependent: :delete_all
   has_many :reviews,         dependent: :delete_all
