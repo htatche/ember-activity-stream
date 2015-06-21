@@ -36,6 +36,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'ember-cli-rails'
 gem 'bower-rails', '~> 0.9.2'
 
+gem 'active_model_serializers' #, '~> 0.8.3'
+
 # Users
 gem 'devise'
 

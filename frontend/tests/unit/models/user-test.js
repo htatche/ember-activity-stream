@@ -13,10 +13,3 @@ test('User is a valid ember-data Model', function (assert) {
   assert.ok(user);
   assert.ok(user instanceof DS.Model);
 });
-
-test('User can fetch records', function (assert) {
-  var store = this.store();
-
-  var users = store.find('user'); 
-  assert.ok(users);
-});

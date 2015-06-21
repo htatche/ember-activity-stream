@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :users
+  resources :blogs
 
   devise_for :users, controllers: { sessions: "users/sessions" }
   root 'application#index'  
