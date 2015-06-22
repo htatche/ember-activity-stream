@@ -3,3 +3,9 @@
 </p>
 
 {{#link-to 'blogs.new'}}blogs new{{/link-to}}
+
+<ul>
+  {{#each model as |blog|}}
+    <li>{{#link-to 'blogs.edit' blog}}{{blog.name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
