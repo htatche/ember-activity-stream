@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :users
-  resources :blogs
+  devise_for :users, controllers: { sessions: "users/sessions", registrations: 'registrations' }
 
-  devise_for :users, controllers: { sessions: "users/sessions" }
+  namespace :api do
+    resources :blogs
+  end
+
   root 'application#index'  
   
   # The priority is based upon order of creation: first created -> highest priority.
