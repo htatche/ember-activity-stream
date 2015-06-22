@@ -4,8 +4,9 @@ class Users::SessionsController < Devise::SessionsController
 
   def create
     super do |user|
-      if request.format.json?        
+      if request.format.json?       
         data = {
+          id:    user.id,
           token: user.authentication_token,
           email: user.email
         }
