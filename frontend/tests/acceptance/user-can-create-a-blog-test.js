@@ -24,7 +24,7 @@ test('a visitor cannot acces /blogs/new', function(assert) {
   });
 });
 
-test('a user can fill the form', function(assert) {
+test('a user can submit the form', function(assert) {
   authenticateSession();
 
   visit('/blogs/new')
