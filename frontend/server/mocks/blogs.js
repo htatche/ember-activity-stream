@@ -19,8 +19,11 @@ module.exports = function(app) {
 
   blogsRouter.get('/:id', function(req, res) {
     res.send({
-      'blogs': {
-        id: req.params.id
+      'blog': {
+        'id': 1,
+        'user_id': 2,
+        'name': 'Minima et eos dolor illum officia sed voluptatum dolorem.',
+        'url': 'http://nolanturner.name/izaiah'
       }
     });
   });
