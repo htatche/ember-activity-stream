@@ -4,4 +4,5 @@ class Blog < ActiveRecord::Base
   validates :url, format: { with: URI.regexp }, if: Proc.new { |a| a.url.present? }{}
 
   belongs_to :user
+  has_many :activities
 end

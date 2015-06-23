@@ -4,4 +4,5 @@ class UserSerializer < ActiveModel::Serializer
   attributes :id, :name
 
   has_many :blogs
+  has_many :activities
 end

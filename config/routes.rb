@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :blogs
     resources :users
+    resources :activities
   end
 
   root 'application#index'  

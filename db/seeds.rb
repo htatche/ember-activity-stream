@@ -23,3 +23,10 @@ if !Review.any?
     Review.create!(@review.attributes)
   }
 end
+
+if !Activity.any?
+  3.times {
+    @activity = FactoryGirl.build(:activity)
+    Activity.create!(@activity.attributes)
+  }
+end

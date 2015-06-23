@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150619220030) do
+ActiveRecord::Schema.define(version: 20150622233931) do
+
+  create_table "activities", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "blog_id"
+    t.integer  "recipe_id"
+    t.integer  "review_id"
+    t.string   "action"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "activities", ["blog_id"], name: "index_activities_on_blog_id"
+  add_index "activities", ["recipe_id"], name: "index_activities_on_recipe_id"
+  add_index "activities", ["review_id"], name: "index_activities_on_review_id"
+  add_index "activities", ["user_id"], name: "index_activities_on_user_id"
 
   create_table "blogs", force: :cascade do |t|
     t.integer  "user_id"
