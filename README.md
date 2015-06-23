@@ -25,7 +25,7 @@ Install the dependencies
 
 Create the database schema
 
-  $ rake db:migrate
+    $ rake db:migrate
     
 And run !
 
@@ -51,7 +51,7 @@ Server side tests can be run with RSpec
 Front end tests can be run using ember-cli (this will also launch an instance of Chrome)
 
     $ cd frontend
-  $ ember-cli test --server
+    $ ember-cli test --server
 
 
 
