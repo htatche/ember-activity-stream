@@ -1,5 +1,7 @@
 # Ora activity stream
 
+![Demo](http://i.imgur.com/cnPdl0y.gif)
+
 The only purpose of this gem is to serve as a code exercise for [ORA](http://orahq.com) (Auckland, New Zealand)
 
 ## Prerequisites
