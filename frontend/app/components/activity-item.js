@@ -12,10 +12,6 @@ export default Ember.Component.extend({
     }
   }.property(),
 
-  timeAgo: function() {
-    return this.get('activity.created_at');
-  }.property(),
-
   item: function() {
     return this.get('activity').item();
   }.property(),

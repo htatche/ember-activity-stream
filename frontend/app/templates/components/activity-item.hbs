@@ -11,7 +11,7 @@
       {{#link-to 'blogs.edit' item}} {{ item.name }} {{/link-to}} 
     {{/if}}
   </span>
-  <p>{{timeAgo}} <br>
+  <p>{{ago activity.created_at}} <br>
      {{activity.user.name}} <br>
   </p>
 </li>
