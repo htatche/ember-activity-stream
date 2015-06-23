@@ -18,10 +18,21 @@ nav .nav-wrapper {
 }
 
 .action-buttons-wrapper {
+  position: relative;
   width: 100%;
   padding: 5px 0;
+
+  .button-container {
+    float: left;
+    width: auto;
+    padding: 0 5px;
+  }  
 }
 
 .deleted-activity-item {
   color: grey;  
+}
+
+.activity-item-type {
+  width: 100px;
 }

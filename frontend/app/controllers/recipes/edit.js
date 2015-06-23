@@ -4,14 +4,14 @@ export default FormController.extend({
   actions: {
     submit: function() {
       var self = this;
-      var blog = self.model; 
+      var recipe = self.model; 
 
-      blog.set('name', self.get('name'));
-      blog.set('url',  self.get('url'));
+      recipe.set('name',  self.get('name'));
+      recipe.set('text',  self.get('text'));
 
       self.model.save()
       .then(
-        self.onSuccess.bind(self, blog, 'update'),
+        self.onSuccess.bind(self, recipe, 'update'),
         self.onFail.bind(self)
       );
 

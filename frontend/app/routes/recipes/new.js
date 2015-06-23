@@ -6,7 +6,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     var user_id = this.get('session.secure.id');
     
     controller.set('name', null);
-    controller.set('url', null);
+    controller.set('text', null);
 
     this.store.find('user', user_id).then(function(user) {
       controller.set('current_user', user);

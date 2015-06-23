@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   item: function() {
-    return this.get('activity').item();
+    return this.get('activity.item').item();
   }.property(),
 
   isAdded: function() {
@@ -16,6 +16,5 @@ export default Ember.Component.extend({
 
   isDeleted: function() {
     return this.get('activity.action') === 'destroy';
-  }.property()    
-
+  }.property()
 });

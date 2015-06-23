@@ -4,14 +4,13 @@ export default FormController.extend({
   actions: {
     submit: function() {
       var self = this;
-      var blog = self.model; 
+      var review = self.model; 
 
-      blog.set('name', self.get('name'));
-      blog.set('url',  self.get('url'));
+      review.set('text',  self.get('text'));
 
       self.model.save()
       .then(
-        self.onSuccess.bind(self, blog, 'update'),
+        self.onSuccess.bind(self, review, 'update'),
         self.onFail.bind(self)
       );
 

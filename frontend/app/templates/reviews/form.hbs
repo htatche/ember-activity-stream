@@ -1,0 +1,20 @@
+<div class='row'>
+  <form class='col s12'>
+    <div class='row'>
+      <div class='input-field col s12'>
+        {{textarea id='review' class='validate' rows='20' value=text}}
+        <label for='review'>Review</label>
+      </div>
+      <div class='input-field col s12'>
+        <button class='btn waves-effect waves-light' id='submit' type='submit' {{action 'submit'}}>
+          Submit
+          <i class='mdi-content-send right'></i>
+        </button>      
+      </div>
+    </div>
+  </form>
+</div>
+
+{{#if model}}
+  <button class="waves-effect waves-light btn red" {{action 'delete'}}><i class="mdi-action-delete left"></i>Delete</button>
+{{/if}}    

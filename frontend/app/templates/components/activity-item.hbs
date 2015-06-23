@@ -13,12 +13,14 @@
   {{/if}}  
 
   <span class="title">
-    {{#if item.deleted}}
-      <span class='deleted-activity-item'>
-        Blog | {{ item.name }}
-      </span>
-    {{else}}
-      {{#link-to 'blogs.edit' item}} Blog | {{ item.name }} {{/link-to}} 
+    {{#if activity.blog}}
+      {{items/blog-item item=activity.blog}}
+    {{/if}}
+    {{#if activity.recipe}}
+      {{items/recipe-item item=activity.recipe}}
+    {{/if}}
+    {{#if activity.review}}
+      {{items/review-item item=activity.review}}
     {{/if}}
   </span>
 

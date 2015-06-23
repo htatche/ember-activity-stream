@@ -1,6 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  sortedDescList: function() {
+    var array = Ember.ArrayProxy.createWithMixins(Ember.SortableMixin, {
+      sortProperties: ['created_at'],
+      sortAscending: false,
+      content: this.get('model')
+    });
+
+    return array;
+  }.property('model'),
+
   newRecord: function(item, user, action) {
     var self = this;
 

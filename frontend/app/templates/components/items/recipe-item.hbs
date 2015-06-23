@@ -1,0 +1,9 @@
+{{#if item.deleted}}
+  <span class='deleted-activity-item'>
+    <span class='activity-item-type'> Recipe | </span>
+    {{ item.name }} 
+  </span>
+{{else}}
+  <span class='activity-item-type'> Recipe | </span>
+  {{#link-to 'recipes.edit' item}} {{ item.name }} {{/link-to}} 
+{{/if}}

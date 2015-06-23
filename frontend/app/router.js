@@ -6,9 +6,20 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('stream');
   this.route('login');
+  this.route('stream');
+
   this.route('blogs', { path: '/blogs' }, function() {
+    this.route('new');
+    this.route('edit', { path: '/:id/edit' });
+  });
+
+  this.route('recipes', { path: '/recipes' }, function() {
+    this.route('new');
+    this.route('edit', { path: '/:id/edit' });
+  });
+
+  this.route('reviews', { path: '/reviews' }, function() {
     this.route('new');
     this.route('edit', { path: '/:id/edit' });
   });

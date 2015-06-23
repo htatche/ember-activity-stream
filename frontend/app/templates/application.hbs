@@ -4,7 +4,12 @@
 
       <nav>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Activity Stream for Ora</a>
+          <a href="#" class="brand-logo" href='http://orahq.com'>
+            Activity Stream for 
+            <span style='color:#6DCEF5'> o </span>
+            <span style='color:#ED4C99'> r </span>
+            <span style='color:#BDD530'> a </span>
+          </a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             {{#if session.isAuthenticated}}
               <li {{action 'invalidateSession'}}> Logout ({{session.secure.email}}) </li>
