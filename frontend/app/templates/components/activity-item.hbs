@@ -1,16 +1,27 @@
 {{yield}}
 
 <li class="collection-item avatar">
-  <i class="material-icons circle green">{{actionIcon}}</i>
+
+  {{#if isAdded}}
+    <i class="material-icons circle green">add</i>
+  {{/if}}
+  {{#if isEdited}}
+    <i class="material-icons circle yellow">mode comment</i>
+  {{/if}}
+  {{#if isDeleted}}
+    <i class="material-icons circle red">delete</i>
+  {{/if}}  
+
   <span class="title">
     {{#if item.deleted}}
       <span class='deleted-activity-item'>
-        {{ item.name }}
+        Blog | {{ item.name }}
       </span>
     {{else}}
-      {{#link-to 'blogs.edit' item}} {{ item.name }} {{/link-to}} 
+      {{#link-to 'blogs.edit' item}} Blog | {{ item.name }} {{/link-to}} 
     {{/if}}
   </span>
+
   <p>{{ago activity.created_at}} <br>
      {{activity.user.name}} <br>
   </p>

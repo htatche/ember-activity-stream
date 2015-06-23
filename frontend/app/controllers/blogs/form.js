@@ -14,12 +14,8 @@ export default Ember.Controller.extend({
     this.transitionToRoute('/');
   },
 
-  onFail: function(err) {
+  onFail: function() {
     this.rollback();
-  },
-
-  sendRequest: function(model) {
-    model.save().then(onSuccess, onFail);
   },
 
   actions: {

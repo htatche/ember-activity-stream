@@ -3,7 +3,7 @@ import Ember from 'ember';
 import { test, moduleForModel } from 'ember-qunit';
  
 moduleForModel('recipe', 'Recipe Model', {
-  needs: ['model:user', 'model:blog', 'model:review']
+  needs: ['model:user', 'model:blog', 'model:review', 'model:activity']
 });
   
 test('Recipe is a valid ember-data Model', function (assert) {

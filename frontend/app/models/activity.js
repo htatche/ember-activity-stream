@@ -10,9 +10,9 @@ export default DS.Model.extend({
   created_at: DS.attr('date'),
 
   item: function() {
-    var item = this.get('blog')
-      || this.get('recipe')
-      || this.get('review');
+    var item = this.get('blog')   ||
+               this.get('recipe') ||
+               this.get('review');
     
     return item;
   },

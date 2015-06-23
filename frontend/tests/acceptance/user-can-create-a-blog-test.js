@@ -26,13 +26,17 @@ test('a visitor cannot acces /blogs/new', function(assert) {
 
 test('a user can submit the form', function(assert) {
   authenticateSession();
+  // this.set('session.secure.id', 1);
+  // alert(currentSession().get('secure.id'));
+
+  // currentSession().authenticate('authenticator:custom');
+  // currentSession().set('secure.id', 1);
 
   visit('/blogs/new')
   .fillIn('#name', 'This time is for good')
   .fillIn('#url', 'http://blog.thistimeisforgood.com')
-  .click('button[type=submit]');
-
-  andThen(function() {
+  .click('button[type="submit"]')
+  .then(function() {
     assert.equal(currentURL(), '/');
   });
 
