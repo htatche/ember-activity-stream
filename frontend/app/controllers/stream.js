@@ -14,5 +14,13 @@ export default Ember.Controller.extend({
     });    
 
     activity.save();
+  },
+
+  actions: {
+    closeAlert: function() {
+      $('#signin-alert').fadeOut( 1000, function() {
+        $( this ).remove();
+      });      
+    }
   }
 });

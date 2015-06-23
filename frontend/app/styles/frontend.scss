@@ -13,6 +13,10 @@ $primary-color: color("green", "lighten-2");
   }
 }
 
+nav .nav-wrapper {
+  padding: 0 10px;
+}
+
 .action-buttons-wrapper {
   width: 100%;
   padding: 5px 0;

@@ -2,7 +2,7 @@ module Api
   class ActivitiesController < ApplicationController
 
     def index
-      @activities = Activity.all
+      @activities = Activity.limit(20).order(created_at: :desc)
       render json: @activities    
     end
 
@@ -17,7 +17,14 @@ module Api
     private
 
     def activity_params
-      params.require(:activity).permit(:user_id, :blog_id, :recipe_id, :review_id, :action, :created_at)
+      params.require(:activity).permit(
+        :user_id,
+        :blog_id,
+        :recipe_id,
+        :review_id,
+        :action,
+        :created_at
+      )
     end    
             
   end

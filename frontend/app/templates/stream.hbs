@@ -11,19 +11,19 @@
     {{/link-to}}     --}}    
   </div>
 {{else}}  
-  <div class="card blue-grey darken-1">
-    <div class="card-content white-text">
-      <span class="card-title">Hi there !</span>
+  <div id='signin-alert' class='card blue-grey darken-1'>
+    <div class='card-content white-text'>
+      <span class='card-title'>Hi there !</span>
       <p>It is nice to have you here dear ORA recruiter. Please, in order to add a new item
       proceed with login first.</p>
     </div>
-    <div class="card-action">
-      <a href="#">Got it</a>
+    <div class='card-action'>
+      <a href='#' {{action 'closeAlert'}}>Got it</a>
     </div>
   </div>
 {{/if}}
 
-<ul class="collection">
+<ul class='collection'>
   {{#each model as |activity|}}
     {{#activity-item activity=activity}}
     {{/activity-item}}  
