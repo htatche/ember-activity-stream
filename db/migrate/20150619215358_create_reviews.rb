@@ -5,6 +5,8 @@ class CreateReviews < ActiveRecord::Migration
       
       t.text :text
 
+      t.boolean :deleted, default: false
+
       t.timestamps null: false
     end
   end

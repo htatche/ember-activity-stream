@@ -3,9 +3,13 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: "users/sessions", registrations: 'registrations' }
 
   namespace :api do
-    resources :blogs
     resources :users
+
     resources :activities
+
+    resources :blogs
+    resources :recipes
+    resources :reviews
   end
 
   root 'application#index'  

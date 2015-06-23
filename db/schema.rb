@@ -41,10 +41,11 @@ ActiveRecord::Schema.define(version: 20150622233931) do
 
   create_table "recipes", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "title"
+    t.string   "name"
     t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "deleted",    default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   add_index "recipes", ["user_id"], name: "index_recipes_on_user_id"
@@ -52,8 +53,9 @@ ActiveRecord::Schema.define(version: 20150622233931) do
   create_table "reviews", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "deleted",    default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"

@@ -16,7 +16,7 @@ RSpec.describe 'Add a new blog', type: :request do
       )
 
       visit '/'
-      save_and_open_page
+      # save_and_open_page
       find_link('Login').click
       fill_in 'email', :with => 'herve@orahq.com'
       fill_in 'Password', :with => 'secret'

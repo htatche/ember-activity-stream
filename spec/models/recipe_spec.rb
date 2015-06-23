@@ -13,8 +13,8 @@ RSpec.describe Recipe, type: :model do
 
   context "given wrong attributes" do
 
-    it "returns an exception if title is blank" do
-      @recipe.title = ""
+    it "returns an exception if name is blank" do
+      @recipe.name = ""
 
       expect { Recipe.create!(@recipe.attributes) }.to raise_error ActiveRecord::RecordInvalid
     end    

@@ -2,7 +2,8 @@ FactoryGirl.define do
   factory :recipe do
     user  { create(:user) }
 
-    title { Faker::Lorem.sentence }
+    sequence( :id ) { |n| "#{n}" }
+    name { Faker::Lorem.sentence }
     text  { Faker::Lorem.paragraph }
   end
 
