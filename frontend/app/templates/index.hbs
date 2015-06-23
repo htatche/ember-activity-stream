@@ -9,3 +9,12 @@
     <li>{{#link-to 'blogs.edit' blog}}{{blog.name}}{{/link-to}}</li>
   {{/each}}
 </ul>
+
+<ul>
+
+  {{#each activities as |activity|}}
+    <li>{{activity.user.name}} has {{activity.action}} {{#link-to 'blogs.edit' activity.blog}}{{activity.blog.name}}{{/link-to}}
+        on {{activity.created_at}}
+    </li>
+  {{/each}}
+</ul>

@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   has_many :blogs,           dependent: :delete_all
   has_many :recipes,         dependent: :delete_all
   has_many :reviews,         dependent: :delete_all
+  has_many :activities,      dependent: :delete_all
 
   before_save :ensure_authentication_token
 

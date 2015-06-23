@@ -10,7 +10,11 @@ export default FormController.extend({
       blog.set('url',  self.get('url'));
 
       self.model.save()
-      .then(self.onSuccess.bind(self), self.onFail.bind(self));       
+      .then(
+        self.onSuccess.bind(self, blog, 'update'),
+        self.onFail.bind(self)
+      );
+
     },
 
     delete: function() {

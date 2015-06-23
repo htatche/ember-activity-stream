@@ -1,6 +1,7 @@
 import FormController from './form';
 
 export default FormController.extend({
+
   actions: {
     submit: function() {
       var self = this;
@@ -14,7 +15,10 @@ export default FormController.extend({
         });
 
         blog.save()
-        .then(self.onSuccess.bind(self), self.onFail.bind(self));
+        .then(
+          self.onSuccess.bind(self, blog, 'create'),
+          self.onFail.bind(self)
+        );
       });
 
     }
