@@ -1,0 +1,23 @@
+@import 'components/color';
+@import 'components/variables';
+ 
+// Custom color settings go here 
+$primary-color: color("blue", "lighten-2");
+
+@import 'materialize';
+
+/* FIXME: Workaround for https://github.com/Dogfalo/materialize/issues/1079 */
+@each $mdi-icon-name, $mdi-icon-value in $mdi-list-icons {
+  .#{$mdi-prefix}#{$mdi-icon-name}:before {
+    content: "\""+ $mdi-icon-value +"\"";
+  }
+}
+
+.action-buttons-wrapper {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.deleted-activity-item {
+  color: grey;  
+}

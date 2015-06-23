@@ -16,13 +16,11 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    sassOptions: {
+      includePaths: ['bower_components/materialize/sass']
     }
   };
-
-  ENV['simple-auth'] = {
-    authorizer: 'simple-auth-authorizer:devise',
-    store: 'simple-auth-session-store:local-storage'
-  }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -42,10 +40,6 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-
-    ENV['simple-auth'] = {
-      store: 'simple-auth-session-store:ephemeral'
-    }    
   }
 
   if (environment === 'production') {

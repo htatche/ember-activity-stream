@@ -1,12 +1,12 @@
 {{yield}}
 
 <li class="collection-item avatar">
-  <i class="material-icons circle green">
-    {{actionIcon}}
-  </i>
+  <i class="material-icons circle green">{{actionIcon}}</i>
   <span class="title">
     {{#if item.deleted}}
-      Destroyed object
+      <span class='deleted-activity-item'>
+        {{ item.name }}
+      </span>
     {{else}}
       {{#link-to 'blogs.edit' item}} {{ item.name }} {{/link-to}} 
     {{/if}}

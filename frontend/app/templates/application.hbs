@@ -1,10 +1,24 @@
-<h2 id="title">Welcome to Ember.js - With Authentication!</h2>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
 
-{{#if session.isAuthenticated}}
-  Hi, {{session.secure.email}}
-  <button {{action 'invalidateSession'}}>Logout</button>
-{{else}}
-  {{#link-to "login"}}Login{{/link-to}}
-{{/if}}
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Activity Stream for Ora</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {{#if session.isAuthenticated}}
+              <li {{action 'invalidateSession'}}> Logout ({{session.secure.email}}) </li>
+            {{else}}
+              <li>{{#link-to "login"}}Login{{/link-to}} </li>
+            {{/if}}    
+          </ul>
+        </div>
+      </nav>
 
-{{outlet}}
+      {{outlet}}
+
+      {{!-- ember-cli-materialize modal container --}}
+      {{md-modal-container}}        
+    </div>
+</div>
+</div>
