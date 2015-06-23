@@ -7,5 +7,14 @@ export default DS.Model.extend({
   review: DS.belongsTo('review', { async: true }),
   
   action: DS.attr('string'),
-  created_at: DS.attr('date')
+  created_at: DS.attr('date'),
+
+  item: function() {
+    var item = this.get('blog')
+      || this.get('recipe')
+      || this.get('review');
+    
+    return item;
+  },
+
 });

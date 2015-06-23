@@ -24,7 +24,8 @@ export default Ember.Controller.extend({
 
   actions: {
     delete: function() {
-      this.model.destroyRecord()
+      this.model.set('deleted', true);
+      this.model.save()
       .then(
         this.onSuccess.bind(this, this.model, 'destroy'),
         this.onFail.bind(this)

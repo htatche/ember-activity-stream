@@ -5,6 +5,7 @@ class CreateBlogs < ActiveRecord::Migration
       
       t.string :name
       t.string :url
+      t.boolean :deleted, default: false
 
       t.timestamps null: false
     end

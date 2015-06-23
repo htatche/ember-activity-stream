@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend({  
   model: function() {
     return this.store.find('activity');
-  },  
+  },
   setupController: function(controller, model) {
-    controller.set('model', model);
-  }  
+   controller.set('model', model); 
+  }      
 });

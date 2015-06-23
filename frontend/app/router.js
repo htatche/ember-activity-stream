@@ -6,12 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('stream', { path: '/' });
   this.route('login');
   this.route('blogs', { path: '/blogs' }, function() {
     this.route('new');
     this.route('edit', { path: '/:id/edit' });
   });
-  this.route('stream');
 });
 
 export default Router;

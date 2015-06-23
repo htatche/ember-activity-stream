@@ -37,7 +37,7 @@ module Api
     private
 
     def blog_params
-      params.require(:blog).permit(:user_id, :name, :url)
+      params.require(:blog).permit(:user_id, :name, :url, :deleted)
     end    
             
   end

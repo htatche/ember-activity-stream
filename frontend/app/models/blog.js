@@ -5,5 +5,7 @@ export default DS.Model.extend({
   activities: DS.hasMany('activities'),
   
   name: DS.attr('string'),
-  url: DS.attr('string')
+  url: DS.attr('string'),
+
+  deleted: DS.attr('boolean')
 });
