@@ -1,1 +1,8 @@
-{{outlet}}
+{{#link-to 'blogs.new'}}blogs new{{/link-to}}
+
+<ul class="collection">
+  {{#each model as |activity|}}
+    {{#activity-item activity=activity}}
+    {{/activity-item}}  
+  {{/each}}
+</ul>
